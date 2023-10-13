@@ -1,8 +1,15 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-
+import Header from './components/global/Header'
 const inter = Inter({ subsets: ['latin'] })
+
+// fontawesome
+import { config } from '@fortawesome/fontawesome-svg-core'
+import '@fortawesome/fontawesome-svg-core/styles.css'
+import RightSideBar from './components/global/RightSideBar'
+config.autoAddCss = false
+
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -16,7 +23,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <div className="body-wrapper">
+
+        <Header/>
+        {children}
+        <RightSideBar/>
+        </div>
+        </body>
     </html>
   )
 }

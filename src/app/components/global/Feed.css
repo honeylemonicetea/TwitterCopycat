@@ -1,0 +1,18 @@
+.feed{
+    margin-left: 18vw;
+    width: 60%;
+    
+}
+.feed__header{
+    border-left: solid white 1px;
+    border-right: solid white 1px;
+    border-bottom: solid white 1px;
+    background-color: rgba(0, 0,0, 0.5);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    height: 7vh;
+}
+.feed-container{
+    height: 200vh;
+}
