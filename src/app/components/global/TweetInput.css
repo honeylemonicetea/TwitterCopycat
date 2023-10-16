@@ -1,0 +1,40 @@
+.tweet-input__wrapper{
+ display: flex;   
+ padding: 10px;
+ background-color: var(--bg-color);
+ border: var(--tweet-border);
+}
+
+.tweet-input__pfp{
+    flex-grow: 1;
+   display: flex;
+   justify-content: center;
+}
+.tweet-input__textarea{
+    flex-grow: 8;
+}
+    .tweet-input__controls{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .tweet-input__buttons{
+        color: var(--twitter-acc-color);
+        width: 10%;
+        display: flex;
+        justify-content: space-around;
+
+    }
+    /* TEXTAREA */
+    #tweet{
+        resize: none;
+        width: 100%;
+        outline: none;
+        background: none;
+        caret-color: var(--text-color);
+    }
+    .tweet-input__post{
+        background: var(--twitter-acc-color);
+        border-radius: 20px;
+        padding: 7px 15px;
+    }

@@ -11,6 +11,7 @@ import {
   faBookmark,
   faUserGroup,
   faUser,
+  faCirclePlus
 } from "@fortawesome/free-solid-svg-icons";
 import "./Header.css";
 import logo from "../../../../public/icons/Logo_of_Twitter.svg";
@@ -53,6 +54,7 @@ const Header = (props: Props) => {
             <Link className="nav-sidebar__icon" href="/" title="Profile">
               <FontAwesomeIcon className="text-white" icon={faUser} />
             </Link>
+          
           </div>
           <div className="nav-sidebar__right">
             <Link className="nav-sidebar__link" href="/">Home</Link>
@@ -65,6 +67,10 @@ const Header = (props: Props) => {
             <Link className="nav-sidebar__link" href="/">Profile</Link>
           </div>
         </div>
+        <button className="post" title="Post">
+              <FontAwesomeIcon title="Post" className="post__icon" icon={faCirclePlus}/>
+              <span className="post__btn-text">Post</span>
+          </button>
       </div>
     </nav>
   );

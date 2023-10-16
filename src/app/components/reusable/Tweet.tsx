@@ -4,6 +4,7 @@ import Link from 'next/link'
 import kitty from '../../../../public/placeholders/kitty.jpg'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faRepeat, faComment, faHeart, faChartSimple } from '@fortawesome/free-solid-svg-icons';
+import './Tweet.css'
 type Props = {}
 
 function Tweet({}: Props) {
@@ -16,6 +17,7 @@ function Tweet({}: Props) {
                 width={50}
                 height={50}
                 alt='pfp'
+                className='pfp-mini'
             />
         </div>
         <div className="tweet__container">

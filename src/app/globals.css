@@ -2,14 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
+
+/* custom variables */
+:root{
+  --twitter-acc-color: #1e9bf0;
+  --twitter-grey: #16181c;
+  --tweet-border:  solid #7c7c7c 1px;
+  --text-color: white;
+  --bg-color: black;
+  --bg-translucent: rgba(0, 0,0, 0.5);
+  --icon-hover:242424;
+}
 body {
   color: rgb(var(--foreground-rgb));
-  background: #9ae4e8;
+  background: #99e4e8;
  
 }
 .body-wrapper{
-  max-width: 1200px;
+  max-width: 1400px;
   width: 100%;
   margin: 0 auto;
   position: relative;
+}
+
+
+/* PFP styles */
+.pfp-mini{
+  width: 55px;
+  height: 55px;
+  object-fit: cover;
+  border-radius: 100%;
 }

@@ -1,18 +1,20 @@
 .nav-sidebar{
-    background-color: black;
+    background-color: var(--bg-color);
     position: absolute;
     left: 0;
     height: 100%;
     width: 18vw;
-    /* display: flex; */
+    display: flex;
     flex-direction: column;
     align-items: flex-end;
+    padding: 0 20px;
 }
 .nav-sidebar__container{
     position: sticky;
-    padding: 20px;
-    background-color: black;
+    /* padding: 20px; */
+    background-color: var(--bg-color);
     top: 0;
+    padding-top: 20px;
     
 }
 
@@ -30,20 +32,61 @@
 .nav-sidebar__icon{
     font-size: 1.6rem;
     padding: 10px;
-    color: white;
+    color: var(--text-color);
     text-align: center;
     border-radius: 100%;
     
 }
     .nav-sidebar__icon:hover{
-        background-color: #242424;
+        background-color: var(--icon-hover);
     }
 
 .nav-sidebar__link{
-    color: white;
+    color: var(--text-color);
     font-size: 1.6rem;
     padding: 10px;
    
 }
 
+/* POST BUTTON */
+.post .post__icon {
+    display: none;
+}
+.post{
+    width: 90%;
+    background-color: var(--twitter-acc-color);
+    display: block;
+    margin: 20px auto;
+    border-radius: 30px;
+    padding: 10px;
+    
+}
+.post__btn-text{
+    font-size: 1.3rem;
+    color: var(--text-color);
+    font-weight: 700;
+}
+
+
+
 /* media query for the side panel??  */
+@media (max-width: 1350px){
+    .nav-sidebar__right, .post__btn-text{
+        display: none;
+    }
+    .post .post__icon{
+        display: block;
+        color: var(--text-color);
+        font-size: 1.7rem;
+        text-align: center;
+        margin: auto;
+    }
+    .post {
+        width: 50px;
+        height: 50px;
+        border-radius: 100%;
+    }
+    .nav-sidebar{
+        /* width: fit-content; */
+    }
+}

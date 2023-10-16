@@ -1,0 +1,15 @@
+.tweet{
+    display: flex;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    border: var(--tweet-border);
+    padding: 10px;
+}
+
+.tweet__pfp{
+    flex-grow: 1;
+}
+
+.tweet__container{
+    flex-grow: 8;
+}
