@@ -12,8 +12,8 @@ function TweetInput({}: Props) {
       <div className="tweet-input__pfp">
         <Image
           src={kitty}
-          width={100}
-          height={100}
+          width={55}
+          height={55}
           alt="pfp"
           className="pfp-mini"
         />

@@ -14,28 +14,34 @@ function Tweet({}: Props) {
             {/* add a hover and a preview if possible */}
             <Image
                 src={kitty}
-                width={50}
-                height={50}
+                width={55}
+                height={55}
                 alt='pfp'
                 className='pfp-mini'
             />
         </div>
         <div className="tweet__container">
             <div className="tweet__tweet-top">
-                <Link href='/'>Account Name</Link>
-                <p className="tweet__acc-handler">
-                    @account_handler
-                </p>
-                <p>2h</p>
+                <Link href='/'>Account Name</Link> 
+                <p className="tweet__acc-handler text-gray-500 px-1">
+                    @account_handler 
+                </p> 
+                <p className='text-gray-500'> · 2h</p>
             </div>
             <div className="tweet__tweet-body">
             Enter all monsters let us twist another fairy tale.
             </div>
             <div className="tweet__tweet-bottom">
-                <button>
+                <button className='text-gray-500' title='reply'>
                     <FontAwesomeIcon icon={faComment}/>
+                </button>
+                <button className='text-gray-500' title='retweet'>
                     <FontAwesomeIcon icon={faRepeat}/>
+                </button>
+                <button className='text-gray-500' title='like'>
                     <FontAwesomeIcon icon={faHeart}/>
+                </button>
+                <button className='text-gray-500' title='view'>
                     <FontAwesomeIcon icon={faChartSimple}/>
                 </button>
             </div>

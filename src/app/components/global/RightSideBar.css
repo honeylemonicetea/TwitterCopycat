@@ -1,0 +1,31 @@
+.right-sidebar{
+    width: 18vw;
+    height: 100%;
+    position: absolute;
+    border: solid red;
+    right: 0;
+}
+
+.right-sidebar__container{
+    display: flex;
+    flex-direction: column;
+    height: 70vh;
+    justify-content: space-around;
+    border: solid green;
+    /* position: sticky; */
+    /* top: 40%; */
+    
+    
+}
+
+.right-sidebar__trends, .right-sidebar__footer{
+    background-color: var(--accent-color);
+    border-radius: 10px;
+    padding: 20px;
+    color: var(--text-color);
+}
+
+
+.right-sidebar__footer{
+
+}

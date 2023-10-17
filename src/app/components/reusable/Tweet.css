@@ -7,9 +7,19 @@
 }
 
 .tweet__pfp{
-    flex-grow: 1;
+    flex-grow: 2;
+    display: flex;
+    justify-content: center;
 }
 
 .tweet__container{
     flex-grow: 8;
 }
+    .tweet__tweet-top{
+        display: flex;
+    }
+    .tweet__tweet-bottom{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
