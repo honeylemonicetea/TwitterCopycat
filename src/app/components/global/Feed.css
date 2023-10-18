@@ -1,8 +1,4 @@
-.feed{
-    margin-left: 18vw;
-    width: 50%;
-    
-}
+
 .feed__header{
     border-left: var(--tweet-border);
     border-right: var(--tweet-border);
@@ -11,8 +7,11 @@
     backdrop-filter: blur(10px);
     position: sticky;
     top: 0;
-    height: 7vh;
+    height: 10vh;
+    padding-top: 20px;
+    padding-left: 10px;
+
 }
 .feed-container{
-    height: 200vh;
+    /* height: 200vh; */
 }

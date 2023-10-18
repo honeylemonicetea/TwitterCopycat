@@ -16,6 +16,12 @@ const Feed = (props: Props) => {
         <div className="feed-container">
              <Tweet/>
              <Tweet/>
+             <Tweet/>
+             <Tweet/>
+             <Tweet/>
+             <Tweet/>
+             <Tweet/>
+             <Tweet/>
         </div>
     </div>
   )

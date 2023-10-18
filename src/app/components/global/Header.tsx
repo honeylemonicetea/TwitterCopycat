@@ -51,7 +51,7 @@ const Header = (props: Props) => {
             <Link className="nav-sidebar__icon" href="/" title="Communities">
               <FontAwesomeIcon className="text-white" icon={faUserGroup} />
             </Link>
-            <Link className="nav-sidebar__icon" href="/" title="Profile">
+            <Link className="nav-sidebar__icon" href="/profile" title="Profile">
               <FontAwesomeIcon className="text-white" icon={faUser} />
             </Link>
           
@@ -64,7 +64,7 @@ const Header = (props: Props) => {
             <Link className="nav-sidebar__link" href="/">Lists</Link>
             <Link className="nav-sidebar__link" href="/">Bookmarks</Link>
             <Link className="nav-sidebar__link" href="/">Communities</Link>
-            <Link className="nav-sidebar__link" href="/">Profile</Link>
+            <Link className="nav-sidebar__link" href="/profile">Profile</Link>
           </div>
         </div>
         <button className="post" title="Post">

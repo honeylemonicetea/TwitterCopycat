@@ -11,7 +11,7 @@ function RightSideBar({}: Props) {
         <div className="right-sidebar__container">
             <SearchBar/>
             <div className="right-sidebar__trends">
-                <h2>Trends</h2>
+                <h2 className='text-2xl mb-2 font-bold'>Trends</h2>
                 <Trend/>
                 <Trend/>    
             </div>
@@ -22,7 +22,7 @@ function RightSideBar({}: Props) {
               <Link href=''>Accessibility</Link>
               <Link href=''>Ads info</Link>
               <Link href=''>More</Link>
-              <p>© 2023 X Corp.</p>
+              <p>© 2023 Twitter Corp.</p>
             </div>
         </div>
     </aside>

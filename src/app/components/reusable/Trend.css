@@ -1,0 +1,13 @@
+.trend{
+    margin: 10px 0;
+}
+
+.trend__top{
+    display: flex;
+    justify-content: space-between;
+    color: rgb(128, 128, 128);
+    font-size: 0.875rem;
+}
+.trend__qty{
+    color: rgb(128, 128, 128);
+}

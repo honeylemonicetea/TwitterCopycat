@@ -9,14 +9,14 @@
   --twitter-grey: #16181c;
   --tweet-border:  solid #343434 1px;
   --text-color: white;
-  --bg-color: black;
+  --bg-color: #000000;
   --bg-translucent: rgba(0, 0,0, 0.5);
   --icon-hover:#242424;
   --accent-color: #16181c;
 }
 body {
   color: rgb(var(--foreground-rgb));
-  background: #a0e6ff;
+  background: var(--bg-color);
  
 }
 .body-wrapper{
@@ -25,6 +25,11 @@ body {
   margin: 0 auto;
   position: relative;
   display: flex;
+}
+
+.children-wrapper{
+  margin-left: 18vw;
+  width: 50%;
 }
 
 

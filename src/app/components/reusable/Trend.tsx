@@ -7,7 +7,7 @@ type Props = {}
 
 const Trend = (props: Props) => {
   return (
-    <div>
+    <div className='trend'>
         <div className="trend__top">
             <span>
             1 · News · Trending
@@ -16,8 +16,8 @@ const Trend = (props: Props) => {
               <FontAwesomeIcon icon={faEllipsis} className='text-gray-400'/>
             </span>
         </div>
-        <h3>Trend Name</h3>
-        <p className='trend__qty'>2.57M posts</p>
+        <h3 className='text-lg'>Trend Name</h3>
+        <p className='trend__qty text-sm'>2.57M posts</p>
     </div>
   )
 }
