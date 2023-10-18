@@ -1,3 +1,90 @@
 .profile{
-    color:  white;
+    color:  var(--text-color);
+    border-left: var(--tweet-border);
+    border-right: var(--tweet-border);
+}
+
+.profile__top{
+    display: flex;
+    padding: 10px;
+    background-color: var(--bg-translucent);
+    position: sticky;
+    top: 0;
+    backdrop-filter: blur(10px);
+}
+.profile__back{
+padding: 0 30px ;
+}
+.profile__top-name__top, .profile__name{
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+.profile__top-name__bottom{
+    color: gray;
+    font-size: 0.875rem;
+}
+
+
+.profile__header{
+    width: 100%;
+    height: 250px;
+    background-image: url(../../../public/placeholders/landsc.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.profile__bio-top{
+    display: flex;
+    position: relative;
+    height: 100px;
+}
+.profile__pic{
+    position: absolute;
+    top: -75px;
+    left: 25px;
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    object-fit: cover;
+    border: solid 3px var(--bg-color);
+
+}
+
+.profile__edit{
+    position: absolute;
+    right: 20px;
+    top: 30px;
+    border: solid 1px gray;
+    padding: 5px 15px;
+    border-radius: 20px;
+}
+.profile__bio-container{
+    padding: 15px;
+}
+.profile__handler{
+    font-size: 0.9rem;
+    color: gray;
+    margin-bottom: 10px;
+}
+
+.profile__reg-date{
+    color: gray;
+    margin: 10px 0;
+    font-size: 0.9rem;
+}
+.profile__follows{
+    display: flex;
+    width: 35%;
+    justify-content: space-around;
+}
+
+.profile__follows span{
+    margin-left: 5px;
+    color: gray;
+    font-size: 0.9rem;
+}
+.profile__tabs{
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 15px;
 }
