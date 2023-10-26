@@ -7,11 +7,13 @@
 
 .tweet-input__pfp{
     flex-grow: 1;
+    flex-basis: 10%;
    display: flex;
    justify-content: center;
 }
 .tweet-input__textarea{
     flex-grow: 6;
+    flex-basis: 90%;
 }
     .tweet-input__controls{
         display: flex;

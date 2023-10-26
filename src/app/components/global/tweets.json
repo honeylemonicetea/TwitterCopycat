@@ -1,0 +1,23 @@
+{
+    "tweets":[
+        {
+            "id": 1,
+            "text": "This is a sample tweet",
+            "authorHandler":"",
+            "authorID":1,
+            "likes":20,
+            "views":20,
+            "media":""
+        },
+        {
+            "id": 1,
+            "text": "This is a sample tweet",
+            "authorHandler":"",
+            "authorID":1,
+            "likes":20,
+            "views":20,
+            "media":""
+        }
+
+    ]
+}

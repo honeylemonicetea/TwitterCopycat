@@ -30,6 +30,7 @@ body {
 .children-wrapper{
   margin-left: 18vw;
   width: 50%;
+  flex-basis: 70%;
 }
 
 

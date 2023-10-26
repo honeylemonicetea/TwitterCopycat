@@ -1,7 +1,9 @@
 .right-sidebar{
-    width: 18vw;
+    flex-basis: 30%;
     height: 100%;
-    position: absolute;
+    flex-shrink: 1;
+    /* position: absolute; */
+    padding: 0 20px;
     right: 0;
     background-color: var(--bg-color);
 }
@@ -13,9 +15,6 @@
     justify-content: space-around;
     position: sticky;
     top: 0;
-
-    
-    
 }
 
 .right-sidebar__trends, .right-sidebar__footer{
@@ -30,4 +29,10 @@
  display: flex;
  flex-wrap: wrap;
  gap: 0 15px;
+}
+
+@media (max-width: 1350px){
+    .right-sidebar{
+        display: none;
+    }
 }

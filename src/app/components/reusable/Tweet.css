@@ -10,10 +10,12 @@
     flex-grow: 2;
     display: flex;
     justify-content: center;
+    flex-basis: 10%;
 }
 
 .tweet__container{
     flex-grow: 8;
+    flex-basis: 90%;
 }
     .tweet__tweet-top{
         display: flex;
