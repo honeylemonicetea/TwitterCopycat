@@ -1,7 +1,7 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-import Header from './components/global/Header'
+import Header from './components/global/Navbar'
 const inter = Inter({ subsets: ['latin'] })
 
 // fontawesome

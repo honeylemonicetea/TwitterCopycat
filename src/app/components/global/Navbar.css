@@ -67,7 +67,9 @@
     font-weight: 700;
 }
 
-
+.nav-sidebar__container_mobile{
+    display: none;
+}
 
 /* media query for the side panel??  */
 @media (max-width: 1350px){
@@ -89,4 +91,27 @@
     .nav-sidebar{
         /* width: fit-content; */
     }
+}
+
+@media (max-width: 420px){
+    .nav-sidebar{
+        display: none;
+    }
+    .nav-sidebar__container_mobile{
+        background-color: rgba(0,0,0,0.6);
+        display: block;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        z-index: 10;
+        /* height: 30px; */
+        /* border: solid white; */
+        display: flex;
+        justify-content: space-around;
+
+    }
+    .nav-sidebar__icon:hover{
+        background-color:transparent
+    }
+    
 }

@@ -25,3 +25,13 @@
         justify-content: space-between;
         width: 100%;
     }
+@media (max-width: 420px){
+    .tweet__pfp{
+        flex-basis: 15%;
+        padding: 10px 0;
+    }
+    .tweet__container{
+        flex-basis: 80%;
+        padding: 10px;
+    }
+}

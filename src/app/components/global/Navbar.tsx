@@ -11,15 +11,16 @@ import {
   faBookmark,
   faUserGroup,
   faUser,
-  faCirclePlus
+  faCirclePlus,
 } from "@fortawesome/free-solid-svg-icons";
-import "./Header.css";
+import "./Navbar.css";
 import logo from "../../../../public/icons/Logo_of_Twitter.svg";
 
 type Props = {};
 
 const Header = (props: Props) => {
   return (
+    <>
     <nav className="nav-sidebar">
       <div className="nav-sidebar__container">
         <div className="logo">
@@ -54,25 +55,64 @@ const Header = (props: Props) => {
             <Link className="nav-sidebar__icon" href="/profile" title="Profile">
               <FontAwesomeIcon className="text-white" icon={faUser} />
             </Link>
-          
           </div>
           <div className="nav-sidebar__right">
-            <Link className="nav-sidebar__link" href="/">Home</Link>
-            <Link className="nav-sidebar__link" href="/">Explore</Link>
-            <Link className="nav-sidebar__link" href="/">Notifications</Link>
-            <Link className="nav-sidebar__link" href="/">Messages</Link>
-            <Link className="nav-sidebar__link" href="/">Lists</Link>
-            <Link className="nav-sidebar__link" href="/">Bookmarks</Link>
-            <Link className="nav-sidebar__link" href="/">Communities</Link>
-            <Link className="nav-sidebar__link" href="/profile">Profile</Link>
+            <Link className="nav-sidebar__link" href="/">
+              Home
+            </Link>
+            <Link className="nav-sidebar__link" href="/">
+              Explore
+            </Link>
+            <Link className="nav-sidebar__link" href="/">
+              Notifications
+            </Link>
+            <Link className="nav-sidebar__link" href="/">
+              Messages
+            </Link>
+            <Link className="nav-sidebar__link" href="/">
+              Lists
+            </Link>
+            <Link className="nav-sidebar__link" href="/">
+              Bookmarks
+            </Link>
+            <Link className="nav-sidebar__link" href="/">
+              Communities
+            </Link>
+            <Link className="nav-sidebar__link" href="/profile">
+              Profile
+            </Link>
           </div>
         </div>
         <button className="post" title="Post">
-              <FontAwesomeIcon title="Post" className="post__icon" icon={faCirclePlus}/>
-              <span className="post__btn-text">Post</span>
-          </button>
+          <FontAwesomeIcon
+            title="Post"
+            className="post__icon"
+            icon={faCirclePlus}
+          />
+          <span className="post__btn-text">Post</span>
+        </button>
       </div>
+
+     
     </nav>
+    <div className="nav-sidebar__mobile-top">
+      
+    </div>
+    <div className="nav-sidebar__container_mobile">
+        <Link className="nav-sidebar__icon" href="/" title="Home">
+          <FontAwesomeIcon className="text-white" icon={faHouse} />
+        </Link>
+        <Link className="nav-sidebar__icon" href="/" title="Explore">
+          <FontAwesomeIcon className="text-white" icon={faMagnifyingGlass} />
+        </Link>
+        <Link className="nav-sidebar__icon" href="/" title="Notifications">
+          <FontAwesomeIcon className="text-white" icon={faBell} />
+        </Link>
+        <Link className="nav-sidebar__icon" href="/" title="Messages">
+          <FontAwesomeIcon className="text-white" icon={faEnvelope} />
+        </Link>
+      </div>
+    </>
   );
 };
 

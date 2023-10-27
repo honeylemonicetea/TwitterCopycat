@@ -34,7 +34,7 @@ function TweetInput({}: Props) {
       [name]:value,
     }))
   }
-  const handleSubmit = async (e:Event) =>{
+  const handleSubmit = async (e:any) =>{
     e.preventDefault()
     const res  = await fetch("/api/Tweets", {
       method: 'POST',
@@ -78,7 +78,7 @@ function TweetInput({}: Props) {
             <button><FontAwesomeIcon icon={faFaceSmile}/></button>
           </div>
           <div className="tweet-input_post-btn">
-            <button className="tweet-input__post" type="submit" onClick={handleSubmit}>Post</button>
+            <button className="tweet-input__post" onClick={handleSubmit}>Post</button>
           </div>
         </div>
       </div>

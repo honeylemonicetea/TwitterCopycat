@@ -42,3 +42,14 @@
         border-radius: 20px;
         padding: 7px 15px;
     }
+
+@media (max-width: 420px){
+    .tweet-input__pfp{
+        flex-basis: 15%;
+        padding: 10px 0;
+    }
+    .tweet-input__textarea{
+        flex-basis: 80%;
+        padding: 10px;
+    }
+}
