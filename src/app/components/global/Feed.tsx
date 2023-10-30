@@ -1,12 +1,9 @@
+
 import React from 'react'
-import Image from 'next/image'
-import { useState, useEffect } from "react";
 import './Feed.css'
-import kitty from '../../../../public/placeholders/kitty.jpg'
 import Tweet from '../reusable/Tweet'
 import TweetInput from './TweetInput'
 type Props = {}
-import tw from './tweets.json'
 import { TweetType } from '@/customTypes';
 
 const getTweets = async () =>{
@@ -22,7 +19,13 @@ const getTweets = async () =>{
 }
 
 const Feed = async (props: Props) => {
-  const {tweets} = await getTweets()   //TODO: ENABLE LATER
+  let tweets:[] = []
+  try {
+    const {tweets} = await getTweets()  //TODO: ENABLE LATER
+  }
+  catch(err){
+    // const tweets = []
+  }
   tweets.reverse()
   console.log(tweets)
   return (

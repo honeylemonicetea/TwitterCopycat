@@ -1,5 +1,6 @@
+
 import React from "react";
-import "./Profile.css";
+import "../components/global/Profile.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft, faCalendar } from "@fortawesome/free-solid-svg-icons";
 import Image from "next/image";
@@ -7,6 +8,7 @@ import kitty from "../../../public/placeholders/kitty.jpg";
 import Link from "next/link";
 import Tweet from "../components/reusable/Tweet";
 import { TweetType } from "@/customTypes";
+import { GetStaticProps } from "next";
 type Props = {};
 
 const getTweets = async () => {
@@ -22,7 +24,13 @@ const getTweets = async () => {
 };
 
 const page = async (props: Props) => {
-    const {tweets} = await getTweets()   //TODO: ENABLE LATER
+  let tweets:[] = []
+  try {
+    const {tweets} = await getTweets()  //TODO: ENABLE LATER
+  }
+  catch(err){
+    // const tweets = []
+  }
   tweets.reverse()
   return (
     <div className="profile">
@@ -72,7 +80,7 @@ const page = async (props: Props) => {
         </div>
       </div>
       <div className="profile__feed">
-      {tweets?tweets.map((tweet:TweetType, _index:number)=><Tweet key={tweet.id} text={tweet.text} id={tweet.id} authorHandler={tweet.authorHandler} authorID={tweet.authorID} likes={tweet.likes} views={tweet.views} media={tweet.media}/>):""}
+      {/* {tweets?tweets.map((tweet:TweetType, _index:number)=><Tweet key={tweet.id} text={tweet.text} id={tweet.id} authorHandler={tweet.authorHandler} authorID={tweet.authorID} likes={tweet.likes} views={tweet.views} media={tweet.media}/>):""} */}
 
       </div>
     </div>
