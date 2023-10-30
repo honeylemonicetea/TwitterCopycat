@@ -8,7 +8,7 @@ import kitty from "../../../public/placeholders/kitty.jpg";
 import Link from "next/link";
 import Tweet from "../components/reusable/Tweet";
 import { TweetType } from "@/customTypes";
-import { GetStaticProps } from "next";
+import {dummyTweets} from '../dummy'
 type Props = {};
 
 const getTweets = async () => {
@@ -24,7 +24,7 @@ const getTweets = async () => {
 };
 
 const page = async (props: Props) => {
-  let tweets:[] = []
+  let tweets:TweetType[] = dummyTweets
   try {
     const {tweets} = await getTweets()  //TODO: ENABLE LATER
   }
@@ -35,9 +35,9 @@ const page = async (props: Props) => {
   return (
     <div className="profile">
       <div className="profile__top">
-        <button className="profile__back">
+        <Link className="profile__back" href='/'>
           <FontAwesomeIcon icon={faArrowLeft} />
-        </button>
+        </Link>
         <div className="profile__top-name">
           <p className="profile__top-name__top">Bella✨🦇🎃</p>
           <p className="profile__top-name__bottom">1,384 tweets</p>
@@ -80,7 +80,7 @@ const page = async (props: Props) => {
         </div>
       </div>
       <div className="profile__feed">
-      {/* {tweets?tweets.map((tweet:TweetType, _index:number)=><Tweet key={tweet.id} text={tweet.text} id={tweet.id} authorHandler={tweet.authorHandler} authorID={tweet.authorID} likes={tweet.likes} views={tweet.views} media={tweet.media}/>):""} */}
+      {tweets?tweets.map((tweet:TweetType, _index:number)=><Tweet key={tweet.id} text={tweet.text} id={tweet.id} authorHandler={tweet.authorHandler} authorID={tweet.authorID} likes={tweet.likes} views={tweet.views} media={tweet.media}/>):""}
 
       </div>
     </div>

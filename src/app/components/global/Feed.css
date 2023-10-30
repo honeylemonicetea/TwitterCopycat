@@ -13,12 +13,26 @@
 .feed-container{
     /* height: 200vh; */
 }
-
+.feed_pfp_mobile, .feed__settings_mobile{
+    display: none;
+}
 
 @media (max-width: 420px){
     .feed{
         width: 100%;
-        
+    }
+    .feed_pfp_mobile, .feed__settings_mobile{
+        display: block;
+        font-size: 1.6em;
+    }
+    .feed__h1_desk{
+        display: none;
+    }
+    .feed__header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
     }
     
 }

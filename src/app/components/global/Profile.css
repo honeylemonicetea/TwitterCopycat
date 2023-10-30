@@ -13,7 +13,9 @@
     backdrop-filter: blur(10px);
 }
 .profile__back{
-padding: 0 30px ;
+    padding: 0 30px ;
+    display: flex;
+    align-items: center;
 }
 .profile__top-name__top, .profile__name{
     font-size: 1.3rem;
@@ -87,4 +89,10 @@ padding: 0 30px ;
     display: flex;
     justify-content: space-around;
     padding-bottom: 15px;
+}
+
+@media(max-width: 420px){
+    .profile__follows{
+        width: 45%;
+    }
 }

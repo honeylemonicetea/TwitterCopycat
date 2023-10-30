@@ -71,6 +71,7 @@
     display: none;
 }
 
+
 /* media query for the side panel??  */
 @media (max-width: 1350px){
     .nav-sidebar__right, .post__btn-text{
@@ -113,5 +114,5 @@
     .nav-sidebar__icon:hover{
         background-color:transparent
     }
-    
+   
 }

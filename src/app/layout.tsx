@@ -1,7 +1,7 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-import Header from './components/global/Navbar'
+import Navbar from './components/global/Navbar'
 const inter = Inter({ subsets: ['latin'] })
 
 // fontawesome
@@ -26,7 +26,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <div className="body-wrapper">
 
-        <Header/>
+        <Navbar/>
         <div className="children-wrapper">
         {children}
         </div>
