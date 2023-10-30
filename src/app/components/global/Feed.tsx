@@ -13,7 +13,7 @@ import { faGear } from "@fortawesome/free-solid-svg-icons";
 
 const getTweets = async () => {
   try {
-    const res = await fetch("http://localhost:3000/api/Tweets", {
+    const res = await fetch("https://gilded-halva-8d31cf.netlify.app/api/Tweets", {
       cache: "no-store",
     });
     console.log("heeeey");
