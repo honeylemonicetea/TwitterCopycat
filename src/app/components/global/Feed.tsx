@@ -24,14 +24,15 @@ const getTweets = async () => {
 };
 
 const Feed = async (props: Props) => {
-  let tweets: TweetType[] = dummyTweets;
+  let tweetsArr: TweetType[] = dummyTweets;
   try {
     const { tweets } = await getTweets(); //TODO: ENABLE LATER
+    tweetsArr = tweets
   } catch (err) {
     // const tweets = []
   }
-  tweets.reverse();
-  console.log(tweets);
+  tweetsArr.reverse();
+  // console.log(tweets);
   return (
     <div className="feed">
       <div className="feed__header">
@@ -51,8 +52,8 @@ const Feed = async (props: Props) => {
       </div>
       <TweetInput />
       <div className="feed-container">
-        {tweets
-          ? tweets.map((tweet: TweetType, _index: number) => (
+        {tweetsArr
+          ? tweetsArr.map((tweet: TweetType, _index: number) => (
               <Tweet
                 key={tweet.id}
                 text={tweet.text}

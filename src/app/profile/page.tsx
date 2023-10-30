@@ -24,14 +24,15 @@ const getTweets = async () => {
 };
 
 const page = async (props: Props) => {
-  let tweets:TweetType[] = dummyTweets
+  let tweetsArr:TweetType[] = dummyTweets
   try {
     const {tweets} = await getTweets()  //TODO: ENABLE LATER
+    tweetsArr = tweets
   }
   catch(err){
     // const tweets = []
   }
-  tweets.reverse()
+  tweetsArr.reverse()
   return (
     <div className="profile">
       <div className="profile__top">
@@ -80,7 +81,7 @@ const page = async (props: Props) => {
         </div>
       </div>
       <div className="profile__feed">
-      {tweets?tweets.map((tweet:TweetType, _index:number)=><Tweet key={tweet.id} text={tweet.text} id={tweet.id} authorHandler={tweet.authorHandler} authorID={tweet.authorID} likes={tweet.likes} views={tweet.views} media={tweet.media}/>):""}
+      {tweetsArr?tweetsArr.map((tweet:TweetType, _index:number)=><Tweet key={tweet.id} text={tweet.text} id={tweet.id} authorHandler={tweet.authorHandler} authorID={tweet.authorID} likes={tweet.likes} views={tweet.views} media={tweet.media}/>):""}
 
       </div>
     </div>
