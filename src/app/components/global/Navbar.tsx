@@ -1,4 +1,5 @@
-import React from "react";
+"use client"
+import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -15,12 +16,17 @@ import {
   faGear
 } from "@fortawesome/free-solid-svg-icons";
 import "./Navbar.css";
+import AddTweetPopUp from "./AddTweetPopUp";
 import kitty from "../../../../public/placeholders/kitty.jpg";
 import logo from "../../../../public/icons/Logo_of_Twitter.svg";
 
 type Props = {};
 
 const Header = (props: Props) => {
+  let [popupState, setPopupState] = useState(false)
+  let togglePopUp = () =>{
+    setPopupState(true)
+  }
   return (
     <>
       <nav className="nav-sidebar">
@@ -96,7 +102,7 @@ const Header = (props: Props) => {
               </Link>
             </div>
           </div>
-          <button className="post" title="Post">
+          <button className="post" title="Post" onClick={togglePopUp}>
             <FontAwesomeIcon
               title="Post"
               className="post__icon"
@@ -125,6 +131,7 @@ const Header = (props: Props) => {
           <FontAwesomeIcon className="text-white" icon={faEnvelope} />
         </Link>
       </div>
+      {popupState?<AddTweetPopUp/>:""}
     </>
   );
 };

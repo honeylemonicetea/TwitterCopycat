@@ -1,2 +1,6 @@
 - ADD RETWEETS
 - ADD SEARCH
++ Loading screen
+- add under construction screens
+- dark mode/light mode switch
+

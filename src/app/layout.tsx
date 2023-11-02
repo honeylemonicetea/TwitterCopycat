@@ -8,6 +8,7 @@ const inter = Inter({ subsets: ['latin'] })
 import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 import RightSideBar from './components/global/RightSideBar'
+import AddTweetPopUp from './components/global/AddTweetPopUp'
 config.autoAddCss = false
 
 
@@ -21,17 +22,18 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  let moreNodes: React.ReactNode[] = []
   return (
     <html lang="en">
       <body className={inter.className}>
         <div className="body-wrapper">
-
         <Navbar/>
         <div className="children-wrapper">
         {children}
         </div>
         <RightSideBar/>
         </div>
+       
         </body>
     </html>
   )

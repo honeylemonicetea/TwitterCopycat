@@ -11,6 +11,7 @@
   --text-color: white;
   --bg-color: #000000;
   --bg-translucent: rgba(0, 0,0, 0.5);
+  --pop-bg: rgba(255, 255, 255, 0.3);
   --icon-hover:#242424;
   --accent-color: #16181c;
 }

@@ -1,0 +1,22 @@
+.popup__container{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: var(--pop-bg);
+    top: 0;
+    left: 0;
+}
+.popup__wrapper{
+    position: absolute;
+    width: 70%;
+    background-color: var(--bg-color);
+    padding: 20px;
+    border-radius: 10px;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.popup__wrapper .tweet-input__wrapper{
+    border: none;
+}
