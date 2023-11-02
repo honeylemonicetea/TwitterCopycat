@@ -9,13 +9,13 @@
  
 }
 .loading-circle{
-    width: 200px;
-    height: 200px;
+    width: 100px;
+    height: 100px;
     border: solid 2px var(--text-color);
     border-bottom: none;
     border-left: none;
     border-radius: 100%;
-    animation: circle-spin 3s linear infinite;
+    animation: circle-spin 3s ease-in-out infinite;
     position: absolute;
     top: 50%;
     left: 50%;

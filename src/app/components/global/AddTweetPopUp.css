@@ -5,6 +5,7 @@
     background-color: var(--pop-bg);
     top: 0;
     left: 0;
+    z-index: 100;
 }
 .popup__wrapper{
     position: absolute;

@@ -12,9 +12,7 @@ const AddTweetPopUp = (props: Props) => {
     let container = useRef(null)
     let closePopUp = () =>{
         // console.log(container.current)
-        if (container !== null){
-            container.current.style.display = "none"
-        }
+        props.toggleFn()
     }
   return (
     <div className="popup__container" ref={container}>

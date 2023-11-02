@@ -25,7 +25,7 @@ type Props = {};
 const Header = (props: Props) => {
   let [popupState, setPopupState] = useState(false)
   let togglePopUp = () =>{
-    setPopupState(true)
+    popupState? setPopupState(false):setPopupState(true)
   }
   return (
     <>
@@ -131,7 +131,7 @@ const Header = (props: Props) => {
           <FontAwesomeIcon className="text-white" icon={faEnvelope} />
         </Link>
       </div>
-      {popupState?<AddTweetPopUp/>:""}
+      {popupState?<AddTweetPopUp toggleFn = {togglePopUp}/>:""}
     </>
   );
 };
