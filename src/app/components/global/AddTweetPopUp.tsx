@@ -6,7 +6,9 @@ import "./AddTweetPopUp.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faX } from "@fortawesome/free-solid-svg-icons";
 
-type Props = {};
+type Props = {
+  toggleFn: Function
+};
 
 const AddTweetPopUp = (props: Props) => {
     let container = useRef(null)

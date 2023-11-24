@@ -11,9 +11,11 @@ import { TweetType } from "@/customTypes";
 import './TweetInput.css'
 import tw from './tweets.json'
 import { Onest } from "next/font/google";
-type Props = {};
+type Props = {
+  closeFun?: Function
+};
 
-function TweetInput({closeFun}: Props) {
+function TweetInput(props: Props) {
   const router = useRouter()
   const startingTweet = {
     "id": 1,
@@ -46,7 +48,9 @@ function TweetInput({closeFun}: Props) {
       throw new Error("failed to create a tweet")
     } 
     setFormData(startingTweet)
-    closeFun()
+    if (props.closeFun){
+      props.closeFun()
+    }
     router.refresh()
     router.push("/")
 
