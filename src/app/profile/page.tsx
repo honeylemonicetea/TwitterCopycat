@@ -43,7 +43,7 @@ const page = async (props: Props) => {
             <FontAwesomeIcon icon={faArrowLeft} />
           </Link>
           <div className="profile__top-name">
-            <p className="profile__top-name__top">Bella✨🦇🎃</p>
+            <p className="profile__top-name__top">User Name✨🦇🎃</p>
             <p className="profile__top-name__bottom">1,384 tweets</p>
           </div>
         </div>
@@ -60,7 +60,7 @@ const page = async (props: Props) => {
             <button className="profile__edit">Edit profile</button>
           </div>
           <div className="profile__bio-container">
-            <p className="profile__name">Bella✨🦇🎃</p>
+            <p className="profile__name">User Name✨🦇🎃</p>
             <p className="profile__handler">@account_handler</p>
             <p className="profile__bio">the user bio goes here</p>
             <p className="profile__reg-date">
