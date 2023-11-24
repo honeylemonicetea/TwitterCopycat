@@ -13,7 +13,7 @@ import tw from './tweets.json'
 import { Onest } from "next/font/google";
 type Props = {};
 
-function TweetInput({}: Props) {
+function TweetInput({closeFun}: Props) {
   const router = useRouter()
   const startingTweet = {
     "id": 1,
@@ -46,6 +46,7 @@ function TweetInput({}: Props) {
       throw new Error("failed to create a tweet")
     } 
     setFormData(startingTweet)
+    closeFun()
     router.refresh()
     router.push("/")
 

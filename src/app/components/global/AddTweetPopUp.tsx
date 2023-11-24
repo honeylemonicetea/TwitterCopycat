@@ -20,8 +20,8 @@ const AddTweetPopUp = (props: Props) => {
         <button onClick={closePopUp}>
           <FontAwesomeIcon icon={faX} className="text-white"></FontAwesomeIcon>
         </button>
-
-        <TweetInput />
+        {/* passing the closing function as a prop, it's underlined but it works anyway */}
+        <TweetInput closeFun = {closePopUp}/>
       </div>
     </div>
   );
