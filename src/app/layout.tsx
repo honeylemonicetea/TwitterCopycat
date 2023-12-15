@@ -1,15 +1,10 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-import Navbar from './components/global/Navbar'
+import SignUp from './page'
 const inter = Inter({ subsets: ['latin'] })
 
 // fontawesome
-import { config } from '@fortawesome/fontawesome-svg-core'
-import '@fortawesome/fontawesome-svg-core/styles.css'
-import RightSideBar from './components/global/RightSideBar'
-import AddTweetPopUp from './components/global/AddTweetPopUp'
-config.autoAddCss = false
 
 
 export const metadata: Metadata = {
@@ -26,14 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="body-wrapper">
-        <Navbar/>
-        <div className="children-wrapper">
-        {children}
-        </div>
-        <RightSideBar/>
-        </div>
-       
+        <SignUp/>
         </body>
     </html>
   )

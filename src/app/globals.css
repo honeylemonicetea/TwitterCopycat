@@ -43,6 +43,80 @@ body {
   border-radius: 100%;
 }
 
+/* sign in page
+ styles */
+.sign-in{
+  height: 100vh;
+  display: flex;
+  padding: 10vh;
+  color: white
+}
+  .sign-in__left{
+      /* height: 100vh; */
+      width: 50%;
+      height: 100%;
+      background: url(https://www.globalcosmeticsnews.com/wp-content/uploads/2021/07/twitter.jpg) center/cover;
+  }
+
+  .sign-in__right{
+      width: 50%;
+      height: 100%;
+  }
+  .sign-in__right-inner{
+    padding: 10%;
+  }
+    .sign-in__right h1{
+      font-size: 4rem;
+      margin-bottom: 50px;
+      font-weight: 700;
+    }
+    .sign-in__right h3{
+      font-size: 2rem;
+      font-weight: 700;
+    }
+    .sign-in__right-innter-wrapper{
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      row-gap: 10px;
+    }
+    .sign-in__sign-up,  .sign-in__github, .sign-in__sign-in-btn{
+      width: 100%;
+      padding: 10px;
+      text-align: center;
+      background-color: var(--text-color);
+      color: var(--bg-color);
+      border-radius: 20px;
+      font-weight: 700;
+    }
+    .sign-in__sign-up{
+      background-color: var(--twitter-acc-color);
+      color: var(--text-color);
+    }
+    .sign-in__sign-in-btn{
+      background-color: transparent;
+      border: 1px solid #536471;
+      color: var(--text-color);
+    }
+/* HOVERS */
+    .sign-in__sign-up:hover{
+      background-color: #1284d1;
+    }
+    .sign-in__github:hover{
+      background-color:#d4d4d4;
+    }
+    .sign-in__sign-in-btn:hover{
+      background-color: #13171a;
+    }
+
+  .sign-in__twitter-icon{
+      font-size: 1.6rem;
+    }
+
+
+
+
+
 @media (max-width: 420px){
   .children-wrapper{
     width: 100%;
