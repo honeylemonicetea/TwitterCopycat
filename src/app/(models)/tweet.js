@@ -13,6 +13,7 @@ const tweetSchema = new Schema(
         "likes":Number,
         "views":Number,
         "media":String,
+        "name":String,
     },
     {
         timestamps: true,

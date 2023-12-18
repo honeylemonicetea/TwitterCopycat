@@ -6,4 +6,5 @@ export interface TweetType {
   likes: number;
   views: number;
   media: string;
+  name: string;
 }

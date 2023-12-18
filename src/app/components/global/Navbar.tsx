@@ -13,7 +13,8 @@ import {
   faUserGroup,
   faUser,
   faCirclePlus,
-  faGear
+  faGear,
+  faRightFromBracket
 } from "@fortawesome/free-solid-svg-icons";
 import "./Navbar.css";
 import AddTweetPopUp from "./AddTweetPopUp";
@@ -36,10 +37,10 @@ const Header = (props: Props) => {
           </div>
           <div className="nav-sidebar__inner">
             <div className="nav-sidebar__left">
-              <Link className="nav-sidebar__icon" href="/" title="Home">
+              <Link className="nav-sidebar__icon" href="/home" title="Home">
                 <FontAwesomeIcon className="text-white" icon={faHouse} />
               </Link>
-              <Link className="nav-sidebar__icon" href="/" title="Explore">
+              <Link className="nav-sidebar__icon" href="/home" title="Explore">
                 <FontAwesomeIcon
                   className="text-white"
                   icon={faMagnifyingGlass}
@@ -47,24 +48,24 @@ const Header = (props: Props) => {
               </Link>
               <Link
                 className="nav-sidebar__icon"
-                href="/"
+                href="/home"
                 title="Notifications"
               >
                 <FontAwesomeIcon className="text-white" icon={faBell} />
               </Link>
-              <Link className="nav-sidebar__icon" href="/" title="Messages">
+              <Link className="nav-sidebar__icon" href="/home" title="Messages">
                 <FontAwesomeIcon className="text-white" icon={faEnvelope} />
               </Link>
-              <Link className="nav-sidebar__icon" href="/" title="Lists">
+              <Link className="nav-sidebar__icon" href="/home" title="Lists">
                 <FontAwesomeIcon
                   className="text-white"
                   icon={faRectangleList}
                 />
               </Link>
-              <Link className="nav-sidebar__icon" href="/" title="Bookmarks">
+              <Link className="nav-sidebar__icon" href="/home" title="Bookmarks">
                 <FontAwesomeIcon className="text-white" icon={faBookmark} />
               </Link>
-              <Link className="nav-sidebar__icon" href="/" title="Communities">
+              <Link className="nav-sidebar__icon" href="/home" title="Communities">
                 <FontAwesomeIcon className="text-white" icon={faUserGroup} />
               </Link>
               <Link
@@ -73,6 +74,9 @@ const Header = (props: Props) => {
                 title="Profile"
               >
                 <FontAwesomeIcon className="text-white" icon={faUser} />
+              </Link>
+              <Link className="nav-sidebar__link" href="/api/auth/signout" title="Log Out">
+                <FontAwesomeIcon className="text-white" icon={faRightFromBracket}/>
               </Link>
             </div>
             <div className="nav-sidebar__right">
@@ -99,6 +103,9 @@ const Header = (props: Props) => {
               </Link>
               <Link className="nav-sidebar__link" href="/profile">
                 Profile
+              </Link>
+              <Link className="nav-sidebar__link" href="/api/auth/signout">
+                Log Out
               </Link>
             </div>
           </div>

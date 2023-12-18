@@ -21,8 +21,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <SignUp/>
-        </body>
+      {children}  
+      </body>
     </html>
   )
 }

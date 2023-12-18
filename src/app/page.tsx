@@ -16,7 +16,7 @@ export default function SignUp() {
           </a>
 
           <p>Already have an account?</p>
-          <a href="" className="sign-in__github">
+          <a href="/api/auth/signin/github" className="sign-in__github">
             Sign in with GitHub
           </a>
           <a href="" className="sign-in__sign-in-btn">

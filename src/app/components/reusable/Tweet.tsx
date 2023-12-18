@@ -7,7 +7,7 @@ import { faRepeat, faComment, faHeart, faChartSimple } from '@fortawesome/free-s
 import './Tweet.css'
 type Props = {}
 
-function Tweet(props:{id: number,  text: string, authorHandler: string, authorID: number, likes: number, views: number,    media: string}) {
+function Tweet(props:{id: number,  text: string, authorHandler: string, authorID: number, likes: number, views: number, media: string, name: string}) {
   return (
     <div className='tweet'>
         <div className="tweet__pfp">
@@ -22,7 +22,7 @@ function Tweet(props:{id: number,  text: string, authorHandler: string, authorID
         </div>
         <div className="tweet__container">
             <div className="tweet__tweet-top">
-                <Link href='/'>Account Name</Link> 
+                <Link href='/profile'>{props.name}</Link> 
                 <p className="tweet__acc-handler text-gray-500 px-1">
                     {props.authorHandler}
                 </p> 

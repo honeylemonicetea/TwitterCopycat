@@ -2,7 +2,14 @@ import React from "react";
 import "./Feed.css";
 import Tweet from "../reusable/Tweet";
 import TweetInput from "./TweetInput";
-type Props = {};
+type Props = {
+  user:{
+    name: string,
+    email: string,
+    image: string
+    
+  }
+};
 import { TweetType } from "@/customTypes";
 import { dummyTweets } from "@/app/dummy";
 import Link from "next/link";
@@ -27,7 +34,8 @@ const Feed = async (props: Props) => {
   let tweetsArr: TweetType[] = dummyTweets;
   try {
     const { tweets } = await getTweets(); //TODO: ENABLE LATER
-    tweetsArr = tweets
+    tweetsArr = tweets.filter((e:TweetType)=>e.authorHandler == `@${props.user.name}`)
+
   } catch (err) {
     // const tweets = []
   }
@@ -50,7 +58,7 @@ const Feed = async (props: Props) => {
           <FontAwesomeIcon className="text-white" icon={faGear} />
         </button>
       </div>
-      <TweetInput />
+      <TweetInput user={props.user} />
       <div className="feed-container">
         {tweetsArr
           ? tweetsArr.map((tweet: TweetType, _index: number) => (
@@ -63,6 +71,7 @@ const Feed = async (props: Props) => {
                 likes={tweet.likes}
                 views={tweet.views}
                 media={tweet.media}
+                name = {tweet.name}
               />
             ))
           : ""}

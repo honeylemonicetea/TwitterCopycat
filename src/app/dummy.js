@@ -7,6 +7,7 @@ export let dummyTweets = [
         likes: 4,
         views: 10,
         media: "",
+        name: ""
     },
     {
         id: 2,
@@ -15,6 +16,7 @@ export let dummyTweets = [
         authorID: 1,
         likes:122,
         views: 10,
-        media: ""
+        media: "",
+        name: ""
     }
 ]

@@ -12,7 +12,13 @@ import './TweetInput.css'
 import tw from './tweets.json'
 import { Onest } from "next/font/google";
 type Props = {
-  closeFun?: Function
+  closeFun?: Function, 
+  user:{
+    name: string,
+   email: string,
+   image: string
+
+  }
 };
 
 function TweetInput(props: Props) {
@@ -20,17 +26,19 @@ function TweetInput(props: Props) {
   const startingTweet = {
     "id": 1,
     "text": "",
-    "authorHandler":"@user_handler",
+    "authorHandler":`@${props.user.name}`,
     "authorID":1,
     "likes":666,
     "views":12345,
     "media":"",
+    "name":props.user.name
   }
   
   const [formData, setFormData] = useState(startingTweet)
   let handleChange = (e:React.ChangeEvent<HTMLTextAreaElement>) =>{
     const value = e.target.value;
     const name = e.target.name;
+    console.log(props.user)
     setFormData((prevState:TweetType)=>({
       ...prevState,
       [name]:value,
@@ -51,8 +59,9 @@ function TweetInput(props: Props) {
     if (props.closeFun){
       props.closeFun()
     }
+    console.log(formData)
     router.refresh()
-    router.push("/")
+    router.push("/home")
 
   }
 

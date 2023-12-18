@@ -9,6 +9,8 @@ import Tweet from "../components/reusable/Tweet";
 import { TweetType } from "@/customTypes";
 import { dummyTweets } from "../dummy";
 import Loading from "../components/global/Loading";
+import { getServerSession } from "next-auth";
+import {options} from '../api/auth/[...nextauth]/options'
 type Props = {};
 
 const getTweets = async () => {
@@ -27,10 +29,12 @@ const getTweets = async () => {
 };
 
 const page = async (props: Props) => {
+  let session = await getServerSession(options)
+  let user = session?.user
   let tweetsArr: TweetType[] = dummyTweets;
   try {
     const { tweets } = await getTweets(); //TODO: ENABLE LATER
-    tweetsArr = tweets;
+    tweetsArr = tweets.filter(e=>e.authorHandler==`@${user?.name}`);
   } catch (err) {
     // const tweets = []
   }
@@ -39,11 +43,11 @@ const page = async (props: Props) => {
     <Suspense fallback={<Loading/>}>
       <div className="profile">
         <div className="profile__top">
-          <Link className="profile__back" href="/">
+          <Link className="profile__back" href="/home">
             <FontAwesomeIcon icon={faArrowLeft} />
           </Link>
           <div className="profile__top-name">
-            <p className="profile__top-name__top">User Name✨🦇🎃</p>
+            <p className="profile__top-name__top">{user?.name}</p>
             <p className="profile__top-name__bottom">1,384 tweets</p>
           </div>
         </div>
@@ -60,8 +64,8 @@ const page = async (props: Props) => {
             <button className="profile__edit">Edit profile</button>
           </div>
           <div className="profile__bio-container">
-            <p className="profile__name">User Name✨🦇🎃</p>
-            <p className="profile__handler">@account_handler</p>
+            <p className="profile__name">{user?.name}</p>
+            <p className="profile__handler">@{user?.name}</p>
             <p className="profile__bio">the user bio goes here</p>
             <p className="profile__reg-date">
               <FontAwesomeIcon icon={faCalendar} /> Joined August 2020
@@ -95,6 +99,7 @@ const page = async (props: Props) => {
                   likes={tweet.likes}
                   views={tweet.views}
                   media={tweet.media}
+                  name = {tweet.name}
                 />
               ))
             : ""}
