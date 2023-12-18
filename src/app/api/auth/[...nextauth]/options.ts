@@ -36,7 +36,6 @@ export const options: NextAuthOptions = {
             }
         })
     ],
-    database: process.env.MONGODB_URI,
     callbacks: {
     async redirect() {
         return "/home"

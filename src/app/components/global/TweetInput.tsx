@@ -1,4 +1,3 @@
-"use client"
 
 import React from "react";
 import { useState, useEffect } from "react";
@@ -9,36 +8,38 @@ import { faImage, faFaceSmile } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { TweetType } from "@/customTypes";
 import './TweetInput.css'
-import tw from './tweets.json'
-import { Onest } from "next/font/google";
+import { getServerSession } from 'next-auth/next'
+import {options} from '../../api/auth/[...nextauth]/options'
+
 type Props = {
   closeFun?: Function, 
-  user:{
-    name: string,
-   email: string,
-   image: string
-
+  user?:{
+    name?: string,
+    email?: string,
+    image?: string
+    
   }
+
 };
 
-function TweetInput(props: Props) {
+async function TweetInput(props: Props) {
   const router = useRouter()
+  let session = await getServerSession(options)
   const startingTweet = {
     "id": 1,
     "text": "",
-    "authorHandler":`@${props.user.name}`,
+    "authorHandler":`@${session?.user?.name}`,
     "authorID":1,
     "likes":666,
     "views":12345,
     "media":"",
-    "name":props.user.name
+    "name":session?.user?.name || ""
   }
   
   const [formData, setFormData] = useState(startingTweet)
   let handleChange = (e:React.ChangeEvent<HTMLTextAreaElement>) =>{
     const value = e.target.value;
     const name = e.target.name;
-    console.log(props.user)
     setFormData((prevState:TweetType)=>({
       ...prevState,
       [name]:value,

@@ -3,10 +3,10 @@ import "./Feed.css";
 import Tweet from "../reusable/Tweet";
 import TweetInput from "./TweetInput";
 type Props = {
-  user:{
-    name: string,
-    email: string,
-    image: string
+  user?:{
+    name?: string,
+    email?: string,
+    image?: string
     
   }
 };
@@ -34,7 +34,7 @@ const Feed = async (props: Props) => {
   let tweetsArr: TweetType[] = dummyTweets;
   try {
     const { tweets } = await getTweets(); //TODO: ENABLE LATER
-    tweetsArr = tweets.filter((e:TweetType)=>e.authorHandler == `@${props.user.name}`)
+    tweetsArr = tweets.filter((e:TweetType)=>e.authorHandler == `@${props.user?.name}`)
 
   } catch (err) {
     // const tweets = []

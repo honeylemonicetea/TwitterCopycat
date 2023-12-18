@@ -5,7 +5,8 @@ import TweetInput from "./TweetInput";
 import "./AddTweetPopUp.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faX } from "@fortawesome/free-solid-svg-icons";
-
+import {options} from '../../api/auth/[...nextauth]/options'
+import { getServerSession } from "next-auth/next";
 type Props = {
   toggleFn: Function
 };
