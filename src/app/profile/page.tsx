@@ -34,7 +34,7 @@ const page = async (props: Props) => {
   let tweetsArr: TweetType[] = dummyTweets;
   try {
     const { tweets } = await getTweets(); //TODO: ENABLE LATER
-    tweetsArr = tweets.filter(e=>e.authorHandler==`@${user?.name}`);
+    tweetsArr = tweets.filter((e:TweetType)=>e.authorHandler==`@${user?.name}`);
   } catch (err) {
     // const tweets = []
   }
