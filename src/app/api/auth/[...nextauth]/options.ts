@@ -1,8 +1,6 @@
 import type { NextAuthOptions } from "next-auth";
 import GitHubProvider from "next-auth/providers/github";
 import CredentialsProvider from "next-auth/providers/credentials";
-import { signIn } from "next-auth/react";
-import { redirect } from "next/dist/server/api-utils";
 
 export const options: NextAuthOptions = {
     providers: [

@@ -8,7 +8,7 @@ import { faImage, faFaceSmile } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { TweetType } from "@/customTypes";
 import './TweetInput.css'
-import { getServerSession } from 'next-auth/next'
+import { getSession, useSession } from "next-auth/react";
 import {options} from '../../api/auth/[...nextauth]/options'
 
 type Props = {
@@ -22,18 +22,19 @@ type Props = {
 
 };
 
-async function TweetInput(props: Props) {
+
+function TweetInput(props: Props) {
+  
   const router = useRouter()
-  let session = await getServerSession(options)
   const startingTweet = {
     "id": 1,
     "text": "",
-    "authorHandler":`@${session?.user?.name}`,
+    "authorHandler":`@${props.user?.name}`,
     "authorID":1,
     "likes":666,
     "views":12345,
     "media":"",
-    "name":session?.user?.name || ""
+    "name":props?.user?.name || ""
   }
   
   const [formData, setFormData] = useState(startingTweet)

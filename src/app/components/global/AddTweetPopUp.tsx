@@ -5,10 +5,14 @@ import TweetInput from "./TweetInput";
 import "./AddTweetPopUp.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faX } from "@fortawesome/free-solid-svg-icons";
-import {options} from '../../api/auth/[...nextauth]/options'
-import { getServerSession } from "next-auth/next";
 type Props = {
-  toggleFn: Function
+  toggleFn: Function,
+  user?:{
+    name?: string,
+    email?: string,
+    image?: string
+    
+  }
 };
 
 const AddTweetPopUp = (props: Props) => {
@@ -24,7 +28,7 @@ const AddTweetPopUp = (props: Props) => {
           <FontAwesomeIcon icon={faX} className="text-white"></FontAwesomeIcon>
         </button>
         {/* passing the closing function as a prop, it's underlined but it works anyway */}
-        <TweetInput closeFun = {closePopUp}/>
+        <TweetInput user={props.user} closeFun = {closePopUp}/>
       </div>
     </div>
   );

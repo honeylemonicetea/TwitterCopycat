@@ -13,15 +13,18 @@ import {
   faUserGroup,
   faUser,
   faCirclePlus,
-  faGear,
   faRightFromBracket
 } from "@fortawesome/free-solid-svg-icons";
 import "./Navbar.css";
 import AddTweetPopUp from "./AddTweetPopUp";
-import kitty from "../../../../public/placeholders/kitty.jpg";
 import logo from "../../../../public/icons/Logo_of_Twitter.svg";
+import { SessionProvider } from "next-auth/react";
+import { Session } from "next-auth";
+import { UserType } from "@/customTypes";
 
-type Props = {};
+type Props = {
+  session?:Session|null
+};
 
 const Header = (props: Props) => {
   let [popupState, setPopupState] = useState(false)
@@ -29,7 +32,7 @@ const Header = (props: Props) => {
     popupState? setPopupState(false):setPopupState(true)
   }
   return (
-    <>
+    <SessionProvider session={props.session}>
       <nav className="nav-sidebar">
         <div className="nav-sidebar__container">
           <div className="logo">
@@ -138,8 +141,8 @@ const Header = (props: Props) => {
           <FontAwesomeIcon className="text-white" icon={faEnvelope} />
         </Link>
       </div>
-      {popupState?<AddTweetPopUp toggleFn = {togglePopUp}/>:""}
-    </>
+      {popupState?<AddTweetPopUp user={props.session?.user as UserType} toggleFn = {togglePopUp}/>:""}
+    </SessionProvider>
   );
 };
 
