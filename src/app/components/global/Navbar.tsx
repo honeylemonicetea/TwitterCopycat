@@ -83,25 +83,25 @@ const Header = (props: Props) => {
               </Link>
             </div>
             <div className="nav-sidebar__right">
-              <Link className="nav-sidebar__link" href="/">
+              <Link className="nav-sidebar__link" href="/home">
                 Home
               </Link>
-              <Link className="nav-sidebar__link" href="/">
+              <Link className="nav-sidebar__link" href="/home">
                 Explore
               </Link>
-              <Link className="nav-sidebar__link" href="/">
+              <Link className="nav-sidebar__link" href="/home">
                 Notifications
               </Link>
-              <Link className="nav-sidebar__link" href="/">
+              <Link className="nav-sidebar__link" href="/home">
                 Messages
               </Link>
-              <Link className="nav-sidebar__link" href="/">
+              <Link className="nav-sidebar__link" href="/home">
                 Lists
               </Link>
-              <Link className="nav-sidebar__link" href="/">
+              <Link className="nav-sidebar__link" href="/home">
                 Bookmarks
               </Link>
-              <Link className="nav-sidebar__link" href="/">
+              <Link className="nav-sidebar__link" href="/home">
                 Communities
               </Link>
               <Link className="nav-sidebar__link" href="/profile">
@@ -128,16 +128,16 @@ const Header = (props: Props) => {
         
       </div>
       <div className="nav-sidebar__container_mobile">
-        <Link className="nav-sidebar__icon" href="/" title="Home">
+        <Link className="nav-sidebar__icon" href="/home" title="Home">
           <FontAwesomeIcon className="text-white" icon={faHouse} />
         </Link>
-        <Link className="nav-sidebar__icon" href="/" title="Explore">
+        <Link className="nav-sidebar__icon" href="/home" title="Explore">
           <FontAwesomeIcon className="text-white" icon={faMagnifyingGlass} />
         </Link>
-        <Link className="nav-sidebar__icon" href="/" title="Notifications">
+        <Link className="nav-sidebar__icon" href="/home" title="Notifications">
           <FontAwesomeIcon className="text-white" icon={faBell} />
         </Link>
-        <Link className="nav-sidebar__icon" href="/" title="Messages">
+        <Link className="nav-sidebar__icon" href="/home" title="Messages">
           <FontAwesomeIcon className="text-white" icon={faEnvelope} />
         </Link>
       </div>
