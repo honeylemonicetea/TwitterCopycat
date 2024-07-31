@@ -39,6 +39,7 @@ const page = async (props: Props) => {
     // const tweets = []
   }
   tweetsArr.reverse();
+  console.log(process.env.FAKE)
   return (
     <Suspense fallback={<Loading/>}>
       <div className="profile">
