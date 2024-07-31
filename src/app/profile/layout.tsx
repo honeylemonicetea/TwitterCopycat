@@ -23,12 +23,14 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   let moreNodes: React.ReactNode[] = []
+  console.log(process.env.FAKE)
   return (
     <html lang="en">
       <body className={inter.className}>
         <div className="body-wrapper">
         <Navbar/>
         <div className="children-wrapper">
+        
         {children}
         </div>
         <RightSideBar/>
